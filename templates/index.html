@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge Queue Café</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>☕ Merge Queue Café</h1>
+        <p class="tagline">Where every commit gets its turn.</p>
+    </header>
+    <main>
+        <section class="menu">
+            <h2>Our Menu</h2>
+            <div class="menu-grid">
+                {% for item in menu %}
+                <div class="menu-card">
+                    <h3>{{ item.name }}</h3>
+                    <span class="category">{{ item.category }}</span>
+                    <p class="description">{{ item.description }}</p>
+                    <p class="price">${{ "%.2f" | format(item.price) }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Merge Queue Café</p>
+    </footer>
+</body>
+</html>
