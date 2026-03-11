@@ -31,6 +31,12 @@ COFFEE_ITEMS = [
     },
     # slot:cappuccino
     # slot:americano
+    {
+        "name": "Cold Brew",
+        "category": "coffee",
+        "price": 5.00,
+        "description": "Slow-steeped for 12 hours, served over ice.",
+    },
     # slot:cold-brew
 ]
 
